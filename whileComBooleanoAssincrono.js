@@ -18,7 +18,7 @@ rl.questionSync = promisify(rl.question);
   let run = true;
   while (run) {
     let promptInput = await rl.questionSync(
-      "Node e React são a Stack Perfeita? - [ 1 => Sim | 2 => Não ]\n"
+      "Node e React são as Stack Perfeita? - [ 1 => Sim | 2 => Não ]\n"
     );
 
     switch (Number(promptInput)) {

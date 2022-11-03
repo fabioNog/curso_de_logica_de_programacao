@@ -1,100 +1,71 @@
-let boolean = false;
+//let boolean = false;
 
+var readline = require("readline");
+resp = "";
 
+var leitor = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-    var readline = require('readline');
-    var resp = "";
+const pegaLeitor = leitor.question(
+  "Escolha uma oção do teclado, pode  ser 1 ou pode ser 2?\n",
+  (answer) => {
+    var resp = Number(answer);
+    return resp;
+    leitor.close();
+  }
+);
 
+let pegaValor;
 
-    var leitor = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
-    
-    leitor.question("Escolha uma oção do teclado, pode  ser 1 ou pode ser 2?\n", function(answer) {
-    
-        var resp = Number(answer);
-        PegarValorDoTeclado(resp)
-    
-         leitor.close();
-    });
+// function PegarValorDoTeclado(resp) {
+//   pegaValor = resp;
+//   return Number(pegaValor);
+// }
 
+console.log(pegaLeitor);
 
+/*function SwitchCase(receberValor){
 
-function PegarValorDoTeclado(receberValor){
-
+    if(receberValor != null){
 
          while(receberValor != 0){
+
+            leitor.question("Escolha uma oção do teclado, pode  ser 1 ou pode ser 2?\n", function(answer) {
+
+                var resp = Number(answer);
+                PegarValorDoTeclado(resp)
+        
+                leitor.close();
+            });
 
             switch(receberValor){
   
                 case 1: 
                     console.log("primeiro caso")
-                    var readline = require('readline');
-                    var resp = "";
-
-
-                    var leitor = readline.createInterface({
-                        input: process.stdin,
-                        output: process.stdout
-                    });
-                    
-                    leitor.question("Escolha uma oção do teclado, pode  ser 1 ou pode ser 2?\n", function(answer) {
-                    
-                        var resp = Number(answer);
-                        receberValor = resp
-                    
-                        leitor.close();
-                    });
+                    LeituraDeTecladoSwitch();
                 break;
                 
                 case 2: 
                     console.log("segundo caso");
-                    var readline = require('readline');
-                    var resp = "";
-
-
-                    var leitor = readline.createInterface({
-                        input: process.stdin,
-                        output: process.stdout
-                    });
-
-                    leitor.question("Escolha uma oção do teclado, pode  ser 1 ou pode ser 2?\n", function(answer) {
-
-                        var resp = Number(answer);
-                        receberValor = resp
-
-                        leitor.close();
-                    });
+                     LeituraDeTecladoSwitch();
                 break;
                 
-                default: 
-                    console.log("Nenhum valor foi selecionado"); 
-                    var readline = require('readline');
-                        var resp = "";
-
-
-                        var leitor = readline.createInterface({
-                            input: process.stdin,
-                            output: process.stdout
-                        });
-                        
-                        leitor.question("Escolha uma oção do teclado, pode  ser 1 ou pode ser 2?\n", function(answer) {
-                        
-                            var resp = Number(answer);
-                            receberValor = resp
-                        
-                            leitor.close();
-                        });
+                default: console.log("Nenhum valor foi selecionado"); LeituraDeTeclado();
             }
-
-            
+        
+        }
 
     }
 
+    else{
+        console.log("qualquer coisa diferente de um valor recebido pelo teclado")
+    }
 }
 
-
+LeituraDeTeclado();
+*/
 
 /* while(resp != 0){
 
